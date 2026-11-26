@@ -1,59 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>praktikum javascript</title>
+    <title>Document</title>
+    <link rel="icon" href="data:,">
 </head>
 <body>
-    <h2>praktikum basic javascript</h2>
-    <p>lihat hasil melalui console</p>
+
+    <h1>ini belajar js</h1>
 
     <script>
-        const nama = "alya";
-        let umur = 19;
-        let nilai1 = 85;
+        // Code JavaScript
+
+        // Variabel dan tipe data
+        const nama = "kasman";
+        let umur = 99;
+        let nilai = 100;
         let aktif = true;
 
-        console.log("nama:", nama);
-        console.log("Umur:", umur);
-        console.log("Nilai:", nilai1);
-        console.log("Status aktif:", aktif);
-        console.log("Tipe nilai:", typeof nilai1);
+        console.log("nama", nama);
+        console.log("umur", umur);
+        console.log("nilai", nilai);
+        console.log("aktif", aktif);
+        console.log("tipe nilai", typeof nilai);
 
+        // Operator aritmetika
         const tugas = 80;
-        const uts = 75;
-        const uas = 90;
-        const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.30 *0.40;
+        const uts = 78;
+        const uas = 95;
 
-        console.log("Nilai akhir:", akhir);
-        console.log("Lulus:", akhir >= 60);
+        const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
 
-       // const nilai = 78;
-        let kategori;
-        if (nilai1 >= 85) {
-            kategori = "A";
-        } else if (nilai1 >= 70) {
-            kategori = "B";
-        } else if (nilai1 >= 60) {
-            kategori = "C";
+        console.log("nilai akhir", akhir);
+
+        // Operator perbandingan
+        console.log("nilai >= 60", akhir >= 60);
+
+        // Percabangan
+        if (akhir >= 80) {
+            console.log("Grade A");
+        } else if (akhir >= 70) {
+            console.log("Grade B");
+        } else if (akhir >= 60) {
+            console.log("Grade C");
         } else {
-            kategori = "D";
+            console.log("Grade D");
         }
 
-        console.log("Nilai:" , nilai1);
-        console.log("Kategori:" , kategori);
+        // Perulangan
+        for (let i = 1; i <= 5; i++) {
+            console.log("Perulangan ke-", i);
+        }
 
-        function hitungDiskon(harga, persen) {
-            return harga - (harga * persen / 100);x`x`
+        // Fungsi sederhana
+        function hitungLuas(panjang, lebar) {
+            return panjang * lebar;
         }
-        
-        for (let i = 0; i <= 3; i++) {
-            const harga = i * 10000
-            const bayar = hitungDiskon(harga, 10);
-            console.log("Barang", i, "Harga:", harga, "Bayar:", bayar);
-            
+
+        console.log("Luas:", hitungLuas(10, 5));
+
+        // Praktikum Mandiri Pengolah Nilai Mahasiswa
+        const namaMahasiswa = "Kasman";
+        const nilaiTugas = 90;
+        const nilaiUts = 80;
+        const nilaiUas = 90;
+
+        const nilaiAkhir =
+            nilaiTugas * 0.30 +
+            nilaiUts * 0.30 +
+            nilaiUas * 0.40;
+
+        let statusKelulusan;
+
+        if (nilaiAkhir >= 60) {
+            statusKelulusan = "LULUS";
+        } else {
+            statusKelulusan = "TIDAK LULUS";
         }
+
+        console.log("=== Pengolah Nilai Mahasiswa ===");
+        console.log("Nama Mahasiswa:", namaMahasiswa);
+        console.log("Nilai Akhir:", nilaiAkhir);
+        console.log("Status Kelulusan:", statusKelulusan);
+
     </script>
+
 </body>
 </html>
