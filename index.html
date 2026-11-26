@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,70 +7,67 @@
     <link rel="icon" href="data:,">
 </head>
 <body>
-
+    
+    
     <h1>ini belajar js</h1>
 
     <script>
-        // Code JavaScript
+        // code js
 
-        // Variabel dan tipe data
-        const nama = "kasman";
+        const name= "kasman";
         let umur = 99;
         let nilai = 100;
         let aktif = true;
 
-        console.log("nama", nama);
+        console.log("nama", name);
         console.log("umur", umur);
         console.log("nilai", nilai);
         console.log("aktif", aktif);
         console.log("tipe nilai", typeof nilai);
 
-        // Operator aritmetika
         const tugas = 80;
-        const uts = 78;
-        const uas = 95;
-
+        const uts = 70;
+        const uas = 90;
         const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
 
         console.log("nilai akhir", akhir);
+        console.log("lulus:", akhir >= 60);
 
-        // Operator perbandingan
-        console.log("nilai >= 60", akhir >= 60);
+        // percabangan if else
+        const nilai2 = 78;
+        let kategori;
 
-        // Percabangan
-        if (akhir >= 80) {
-            console.log("Grade A");
-        } else if (akhir >= 70) {
-            console.log("Grade B");
-        } else if (akhir >= 60) {
-            console.log("Grade C");
+        if (nilai2 >= 85) {
+            kategori = "A";
+        } else if (nilai2 >= 70) {
+            kategori = "B";
+        } else if (nilai2 >= 60) {
+            kategori = "C";
         } else {
-            console.log("Grade D");
+            kategori = "D";
         }
 
-        // Perulangan
-        for (let i = 1; i <= 5; i++) {
-            console.log("Perulangan ke-", i);
-        }
+        console.log("nilai2", nilai2);
+        console.log("kategori", kategori);    
 
-        // Fungsi sederhana
-        function hitungLuas(panjang, lebar) {
-            return panjang * lebar;
+        //perulangan dan fungsi dasar
+        function hitungDiskon(harga, persen) {
+            return harga - (harga * persen / 100);
         }
-
-        console.log("Luas:", hitungLuas(10, 5));
+        
+        for (let i =1; i <= 3; i++) {
+            const harga = i * 10000;
+            const bayar = hitungDiskon(harga, 10);
+            console.log("barang", i , "harga", harga, "bayar:", bayar);
+        }
 
         // Praktikum Mandiri Pengolah Nilai Mahasiswa
-        const namaMahasiswa = "Kasman";
+        const namaMahasiswa = "kasman";
         const nilaiTugas = 90;
         const nilaiUts = 80;
         const nilaiUas = 90;
 
-        const nilaiAkhir =
-            nilaiTugas * 0.30 +
-            nilaiUts * 0.30 +
-            nilaiUas * 0.40;
-
+        const nilaiAkhir = nilaiTugas * 0.30 + nilaiUts * 0.30 + nilaiUas * 0.40;
         let statusKelulusan;
 
         if (nilaiAkhir >= 60) {
@@ -84,8 +80,7 @@
         console.log("Nama Mahasiswa:", namaMahasiswa);
         console.log("Nilai Akhir:", nilaiAkhir);
         console.log("Status Kelulusan:", statusKelulusan);
-
+        
     </script>
-
 </body>
 </html>
